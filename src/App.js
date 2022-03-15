@@ -1,7 +1,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useState } from 'react';
-import Switch from './component/Switch';
 import { ThemeModeContext } from './context/ThemeModeContext';
+import Switch from './component/Switch';
 
 function App() {
   //State for the current mode [dark or light]
