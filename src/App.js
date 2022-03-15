@@ -1,7 +1,7 @@
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { useState } from 'react';
-import Switch from './components/Switch';
-import ThemeModeContext from './context/ThemeModeContext';
+import Switch from './component/Switch';
+import { ThemeModeContext } from './context/ThemeModeContext';
 
 function App() {
   //State for the current mode [dark or light]
@@ -12,21 +12,21 @@ function App() {
     toggleThemeMode: () => {
       setMode((prev) => prev === 'light'? 'dark': 'light')
     }
-  }
+  };
 
   //Theme for MUI ThemeContext 
   const theme = createTheme({
     palette: {
       mode,
     },
-  })
+  });
 
   return (<>
-    <ThemeProvider theme={theme}>
-      <ThemeModeContext.Provider value={themeMode}>       
-        <Switch/>
-      </ThemeModeContext.Provider>
-    </ThemeProvider>
+    <ThemeModeContext.Provider value={themeMode}>    
+      <ThemeProvider theme={theme}>  
+          <Switch/>
+      </ThemeProvider>
+    </ThemeModeContext.Provider>
   </>);
   
 }
