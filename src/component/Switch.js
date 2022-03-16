@@ -1,10 +1,9 @@
 import { useContext } from "react";
-import { Button, TextField, Grid, Box } from "@mui/material";
+import { Button, Grid} from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 import { ThemeModeContext } from "../context/ThemeModeContext";
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
-import IconButton from '@mui/material/IconButton';
 
 export default function Switch (){    
   const handleToggleMode = useContext(ThemeModeContext);
